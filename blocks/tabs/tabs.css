@@ -1,3 +1,4 @@
+
 .tabs .tabs-list {
   display: flex;
   gap: 0.5ch;
@@ -39,7 +40,6 @@
   margin: 0;
 }
 
-
 .tabs .tabs-list button[aria-selected='true'] {
   border-bottom: 1px solid var(--background-color);
   background-color: var(--background-color);
@@ -54,5 +54,105 @@
 }
 
 .tabs .tabs-panel[aria-hidden='true'] {
+  display: none;
+}
+
+.tabs.tabs16 {
+  background: #000;
+  padding: 0;
+  margin: 0;
+}
+
+.tabs.tabs16 .tabs-list {
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  width: 100%;
+  background: #000;
+  border: none;
+  margin: 0;
+  padding: 0;
+  align-items: flex-end;
+  min-height: 20px;
+  position: relative;
+  height: 24px;
+}
+
+.tabs.tabs16 .tabs-list .tabs-tab {
+  flex: 1 1 0%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  background: #000;
+  border: none;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+  color: #757575;
+  font-weight: 400;
+  font-size: 14px;
+  min-width: 0;
+  min-height: 0;
+  height: 100%;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+  outline: none;
+  cursor: pointer;
+  transition: color 0.2s, font-weight 0.2s;
+}
+
+.tabs.tabs16 .tabs-list .tabs-tab p {
+  margin: 0;
+  color: #757575;
+  font-size: 14px;
+  font-weight: 400;
+  width: 100%;
+  text-align: center;
+  line-height: 1.1;
+  pointer-events: none;
+  user-select: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+
+.tabs.tabs16 .tabs-list .tabs-tab[aria-selected="true"] {
+  color: #fff;
+  font-weight: 700;
+  border-bottom: 2px solid #fff;
+  cursor: default;
+}
+
+.tabs.tabs16 .tabs-list .tabs-tab[aria-selected="true"]:focus,
+.tabs.tabs16 .tabs-list .tabs-tab[aria-selected="true"]:hover {
+  color: #fff;
+  background: #000;
+  border-bottom: 2px solid #fff;
+}
+
+.tabs.tabs16 .tabs-list .tabs-tab[aria-selected="true"] p {
+  color: #fff;
+  font-weight: 700;
+}
+
+.tabs.tabs16 .tabs-list .tabs-tab:not([aria-selected="true"]) {
+  color: #757575;
+  font-weight: 400;
+  border-bottom: none;
+}
+
+.tabs.tabs16 .tabs-list .tabs-tab:not([aria-selected="true"]) p {
+  color: #757575;
+  font-weight: 400;
+}
+
+.tabs.tabs16 .tabs-panel {
+  background: #000;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+.tabs.tabs16 .tabs-panel[aria-hidden="true"] {
   display: none;
 }
